@@ -4,33 +4,28 @@ import { createRoot } from 'react-dom/client'
 const App = () => {
   console.log('send help')
 
-  // const changeBackground = () => {
-  //   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-  //     const tab = tabs[0]
-  //     console.log('tab', tabs)
-  //     if (tab.id) {
-  //       chrome.tabs.sendMessage(
-  //         tab.id,
-  //         {
-  //           color: '#555555',
-  //         },
-  //         (msg) => {
-  //           console.log('result message:', msg)
-  //         }
-  //       )
-  //     }
-  //   })
-  // }
+
+  function notify() {
+    chrome.runtime.sendMessage('', {
+      type: 'notification',
+      options: {
+        title: 'test',
+        message: 'test',
+        iconUrl: '/test.png',
+        type: 'basic',
+      },
+    })
+  }
 
   return (
     <div>
       <div
         onClick={() => {
           console.log('jo mama')
-          // changeBackground()
+          notify()
         }}
       >
-        Hello AC
+        notify
       </div>
     </div>
   )

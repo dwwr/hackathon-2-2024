@@ -4,12 +4,20 @@
   "version": "0.1",
   "description": "Deez",
 
-  "permissions": ["tabs", "activeTab", "tabCapture", "scripting"],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "alarms",
+    "tabCapture",
+    "scripting",
+    "notifications"
+  ],
   "background": {
     "service_worker": "js/background.js"
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "test.png"
   },
   "content_scripts": [
     {
