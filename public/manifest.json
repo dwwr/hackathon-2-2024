@@ -4,14 +4,7 @@
   "version": "0.1",
   "description": "Deez",
 
-  "permissions": [
-    "tabs",
-    "activeTab",
-    "alarms",
-    "tabCapture",
-    "scripting",
-    "notifications"
-  ],
+  "permissions": ["tabs", "activeTab", "alarms", "tabCapture", "scripting", "notifications"],
   "background": {
     "service_worker": "js/background.js"
   },
